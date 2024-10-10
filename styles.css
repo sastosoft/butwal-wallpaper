@@ -177,3 +177,22 @@ footer {
   background-color: #808080; /* Darker grey color on hover */
   transform: translateY(-50%) scale(1.1); /* Slightly increase size */
 }
+
+.typewriter {
+  font-family: monospace; /* Change to your desired font */
+  display: inline-block; /* Keep the width of the text */
+  white-space: nowrap; /* Keeps text on a single line */
+  overflow: hidden; /* Ensures text doesn't overflow */
+  border-right: 4px solid transparent; /* Cursor effect */
+  animation: blink-caret 0.75s step-end infinite; /* Cursor blinking */
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Cursor invisible */
+  }
+  50% {
+    border-color: black; /* Cursor visible */
+  }
+}
