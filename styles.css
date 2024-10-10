@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* Ensures that the whole page doesn’t overflow horizontally */
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #4caf50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  overflow: hidden; /* Prevent overflow in header */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  white-space: nowrap; /* Ensure nav items are in a single line */
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  padding: 20px 20px; /* Add left and right padding */
+  background: #f9f9f9;
+  text-align: center;
+  overflow: hidden; /* Ensures the gallery section doesn’t cause overflow */
+}
+
+.gallery h2 {
+  margin-bottom: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling within this container */
+  padding: 10px 0; /* Keep top and bottom padding as is */
+  scroll-snap-type: x mandatory;
+  max-width: calc(
+    100vw - 40px
+  ); /* Adjust the max width to account for padding */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE */
+  white-space: nowrap; /* Prevent line breaking of items */
+  margin: 0 20px; /* Optional: Add margin to center the container within the gallery section */
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.wallpaper {
+  flex: 0 0 auto; /* Prevent flex-grow */
+  width: 220px; /* Set fixed width for each wallpaper */
+  margin-right: 10px; /* Space between wallpapers */
+  scroll-snap-align: start;
+}
+
+.wallpaper img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    margin: 0 5px;
+  }
+
+  .wallpaper {
+    width: 160px;
+    margin-right: 5px;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  .gallery h2 {
+    font-size: 1.5em;
+  }
+
+  /* Hide arrow buttons on mobile devices */
+  .arrow {
+    display: none; /* Hide the arrow buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 5px 0;
+  }
+
+  footer {
+    padding: 5px 0;
+  }
+
+  .wallpaper {
+    width: 140px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #a9a9a9; /* Default background color (light grey) */
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1; /* Ensures the buttons are above other elements */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and size */
+}
+
+.arrow.left {
+  left: 10px; /* Position for the left button */
+}
+
+.arrow.right {
+  right: 10px; /* Position for the right button */
+}
+
+/* Change color and size on hover */
+.arrow:hover {
+  background-color: #808080; /* Darker grey color on hover */
+  transform: translateY(-50%) scale(1.1); /* Slightly increase size */
+}
