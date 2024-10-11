@@ -64,33 +64,27 @@ main {
 }
 
 .gallery-container {
-  display: flex;
-  overflow-x: auto; /* Enable horizontal scrolling within this container */
-  padding: 10px 0; /* Keep top and bottom padding as is */
-  scroll-snap-type: x mandatory;
+  display: grid; /* Change to grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for desktops */
+  grid-gap: 20px; /* Space between items */
   max-width: calc(
     100vw - 40px
   ); /* Adjust the max width to account for padding */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar in IE */
-  white-space: nowrap; /* Prevent line breaking of items */
-  margin: 0 20px; /* Optional: Add margin to center the container within the gallery section */
-}
-
-.gallery-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  margin: 0 auto; /* Center the gallery */
 }
 
 .wallpaper {
-  flex: 0 0 auto; /* Prevent flex-grow */
-  width: 220px; /* Set fixed width for each wallpaper */
-  margin-right: 10px; /* Space between wallpapers */
-  scroll-snap-align: start;
+  overflow: hidden; /* Ensures images don't overflow */
+  border-radius: 10px; /* Optional: adds rounded corners */
 }
 
 .wallpaper img {
-  width: 100%;
-  border-radius: 10px;
+  width: 100%; /* Ensure images take full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.wallpaper:hover img {
+  transform: scale(1.1); /* Slightly zoom in the image */
 }
 
 footer {
@@ -104,6 +98,13 @@ footer {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for tablets and smaller screens */
+  }
+
   nav ul {
     flex-direction: row;
     justify-content: space-around;
@@ -114,8 +115,7 @@ footer {
   }
 
   .wallpaper {
-    width: 160px;
-    margin-right: 5px;
+    margin-right: 5px; /* Adjust margin */
   }
 
   header {
@@ -146,7 +146,7 @@ footer {
   }
 
   .wallpaper {
-    width: 140px;
+    width: 100%; /* Make wallpapers responsive */
   }
 }
 
