@@ -1,0 +1,58 @@
+.header {
+  position: absolute; /* Change to absolute to allow for initial transparency */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Light black background */
+  color: white;
+  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center items vertically */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+.header.sticky {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker black when sticky */
+}
+
+.logo img {
+  width: 300px;
+}
+
+.navbar ul {
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  display: flex; /* Use flexbox for horizontal layout */
+}
+
+.navbar li {
+  margin-left: 20px; /* Space between links */
+}
+
+.navbar a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.navbar a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 150px; /* Smaller logo for mobile */
+  }
+
+  .header {
+    padding: 10px; /* Less padding on mobile */
+  }
+
+  .navbar li {
+    margin-left: 10px; /* Adjust spacing for mobile */
+  }
+}

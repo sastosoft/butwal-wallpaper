@@ -1,198 +1,80 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  height: 100%;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden; /* Ensures that the whole page doesn’t overflow horizontally */
 }
 
-.wrapper {
-  flex: 1;
+.hero {
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/images1/Living-room-design-hd-wallpaper.jpg"); /* Your wallpaper image */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Adjust height as needed */
   display: flex;
-  flex-direction: column;
-}
-
-header {
-  background: #4caf50;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-  overflow: hidden; /* Prevent overflow in header */
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 0;
-  white-space: nowrap; /* Ensure nav items are in a single line */
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  text-align: center;
 }
 
-main {
+.hero-content {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for text readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
 }
 
-.gallery {
-  padding: 20px 20px; /* Add left and right padding */
-  background: #f9f9f9;
-  text-align: center;
-  overflow: hidden; /* Ensures the gallery section doesn’t cause overflow */
-}
-
-.gallery h2 {
-  margin-bottom: 10px;
-}
-
-.gallery-container {
-  display: grid; /* Change to grid layout */
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for desktops */
-  grid-gap: 20px; /* Space between items */
-  max-width: calc(
-    100vw - 40px
-  ); /* Adjust the max width to account for padding */
-  margin: 0 auto; /* Center the gallery */
-}
-
-.wallpaper {
-  overflow: hidden; /* Ensures images don't overflow */
-  border-radius: 10px; /* Optional: adds rounded corners */
-}
-
-.wallpaper img {
-  width: 100%; /* Ensure images take full width */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.wallpaper:hover img {
-  transform: scale(1.1); /* Slightly zoom in the image */
-}
-
-footer {
-  background: #333;
+.footer {
+  background-color: #333; /* Change to your desired color */
   color: white;
   text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .gallery-container {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 columns for tablets and smaller screens */
-  }
-
-  nav ul {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  nav ul li {
-    margin: 0 5px;
-  }
-
-  .wallpaper {
-    margin-right: 5px; /* Adjust margin */
-  }
-
-  header {
-    padding: 10px 0;
-  }
-
-  .gallery h2 {
-    font-size: 1.5em;
-  }
-
-  /* Hide arrow buttons on mobile devices */
-  .arrow {
-    display: none; /* Hide the arrow buttons */
-  }
-}
-
-@media (max-width: 480px) {
-  nav ul {
-    font-size: 14px;
-  }
-
-  header {
-    padding: 5px 0;
-  }
-
-  footer {
-    padding: 5px 0;
-  }
-
-  .wallpaper {
-    width: 100%; /* Make wallpapers responsive */
-  }
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #a9a9a9; /* Default background color (light grey) */
-  border: none;
-  border-radius: 50%;
-  font-size: 24px;
   padding: 10px;
-  cursor: pointer;
-  z-index: 1; /* Ensures the buttons are above other elements */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for color and size */
 }
 
-.arrow.left {
-  left: 10px; /* Position for the left button */
+.hot-categories,
+.new-arrivals {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color for sections */
+  text-align: center;
 }
 
-.arrow.right {
-  right: 10px; /* Position for the right button */
+.categories-container,
+.arrivals-container {
+  display: flex;
+  justify-content: space-around; /* Space items evenly */
+  flex-wrap: wrap; /* Wrap items if they don't fit in one row */
 }
 
-/* Change color and size on hover */
-.arrow:hover {
-  background-color: #808080; /* Darker grey color on hover */
-  transform: translateY(-50%) scale(1.1); /* Slightly increase size */
+.category,
+.arrival {
+  margin: 10px;
+  border: 1px solid #ddd; /* Light border for items */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px;
+  width: 150px; /* Fixed width for items */
 }
 
-.typewriter {
-  font-family: monospace; /* Change to your desired font */
-  display: inline-block; /* Keep the width of the text */
-  white-space: nowrap; /* Keeps text on a single line */
-  overflow: hidden; /* Ensures text doesn't overflow */
-  border-right: 4px solid transparent; /* Cursor effect */
-  animation: blink-caret 0.75s step-end infinite; /* Cursor blinking */
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent; /* Cursor invisible */
-  }
-  50% {
-    border-color: black; /* Cursor visible */
-  }
+.category img,
+.arrival img {
+  max-width: 100%; /* Responsive images */
+  border-radius: 5px; /* Rounded corners for images */
 }
