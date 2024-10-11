@@ -1,0 +1,98 @@
+.hero {
+  position: relative; /* Set the hero position relative for stacking */
+  overflow: hidden;
+  height: 70vh; /* Standard height for the hero section */
+  z-index: 1; /* Lower z-index for hero to be below header */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+.hero-slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Enable smooth transitions */
+  height: 100%; /* Ensure slider height matches hero height */
+}
+
+.slide {
+  min-width: 100%; /* Each slide takes full width */
+  height: 100%; /* Ensure slide height matches hero height */
+  display: flex; /* Flexbox to center images */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.slide img {
+  width: 100%; /* Fill the horizontal space */
+  height: 100%; /* Ensure the image fills the height */
+  object-fit: cover; /* Cover ensures that the image fills the space without being distorted */
+}
+
+.hero-content {
+  position: absolute; /* Position content over images */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent black background for a subtle look */
+  color: white; /* Text color */
+  padding: 10px 15px; /* Adjusted padding for smaller screens */
+  border-radius: 10px; /* Rounded corners */
+  z-index: 2; /* Ensure content is above images */
+  text-align: center; /* Center the text */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add subtle shadow for depth */
+}
+
+.hero-content h2 {
+  font-size: 2em; /* Adjusted font size for mobile */
+  margin: 0; /* Remove default margin */
+}
+
+.hero-content p {
+  font-size: 1em; /* Adjusted font size for mobile */
+  margin: 10px 0 0 0; /* Top margin only */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* Adjust height for smaller screens */
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+  }
+
+  .hero-content {
+    padding: 10px; /* More padding for better readability */
+  }
+
+  .hero-content h2 {
+    font-size: 1.5em; /* Smaller font size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh; /* Further adjust height for very small screens */
+    padding: 0; /* Ensure no padding */
+    margin: 0; /* Ensure no margin */
+  }
+
+  .hero-content {
+    padding: 5px; /* Reduce padding for very small screens */
+  }
+
+  .hero-content h2 {
+    font-size: 1.3em; /* Further smaller font size for very small screens */
+  }
+
+  .hero-content p {
+    font-size: 0.8em; /* Further smaller font size for very small screens */
+  }
+}

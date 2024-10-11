@@ -15,29 +15,6 @@ body {
   min-height: 100vh;
 }
 
-.hero {
-  background-image: url("https://www.pixelstalk.net/wp-content/uploads/images1/Living-room-design-hd-wallpaper.jpg"); /* Your wallpaper image */
-  background-size: cover;
-  background-position: center;
-  height: 400px; /* Adjust height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
-
-.hero-content {
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for text readability */
-  padding: 20px;
-  border-radius: 10px;
-}
-
 .main-content {
   flex: 1;
   padding: 20px;
