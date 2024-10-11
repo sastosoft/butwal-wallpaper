@@ -1,0 +1,32 @@
+.typewriter {
+  display: inline-block; /* Ensure the span behaves as an inline block */
+  overflow: hidden; /* Hide the overflow */
+  border-right: 0.15em solid orange; /* Typewriter cursor effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: typing 4s steps(30, end) infinite alternate,
+    blink-caret 0.75s step-end infinite; /* Infinite typing effect */
+}
+
+/* Typing effect */
+@keyframes typing {
+  0% {
+    width: 0; /* Start with no width */
+  }
+  50% {
+    width: 100%; /* Complete the text */
+  }
+  100% {
+    width: 0; /* Reset to no width */
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Make the cursor invisible */
+  }
+  50% {
+    border-color: orange; /* Make the cursor visible */
+  }
+}
