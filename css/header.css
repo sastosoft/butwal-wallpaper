@@ -1,58 +1,149 @@
-.header {
-  position: absolute; /* Change to absolute to allow for initial transparency */
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0); /* Fully transparent initially */
-  color: white;
-  padding: 20px;
+/* Reset styles for body */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Header styles */
+header {
   display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between logo and nav */
+  justify-content: space-between; /* Space between logo and menu */
   align-items: center; /* Center items vertically */
+  background-color: transparent; /* No background color initially */
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure the header is above other elements */
+  padding: 0; /* Remove all padding */
+  margin: 0; /* Remove all margin */
+  width: 100%; /* Ensure header takes the full width of the viewport */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
-  z-index: 1000; /* Ensure header is above other content */
+  height: 70px; /* Set a height for the header */
 }
 
-.header.sticky {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8); /* Darker black when sticky */
+/* Change background color when the header has the 'sticky' class */
+header.sticky {
+  background-color: black; /* Background color when scrolling */
 }
 
+/* Logo styles */
 .logo img {
-  width: 300px;
+  height: 50px; /* Adjust logo size */
 }
 
-.navbar ul {
-  list-style: none; /* Remove bullet points */
-  margin: 0; /* Remove margin */
-  padding: 0; /* Remove padding */
-  display: flex; /* Use flexbox for horizontal layout */
+/* Navigation menu styles */
+nav {
+  display: flex; /* Show the menu as flex on larger screens */
 }
 
-.navbar li {
-  margin-left: 20px; /* Space between links */
+/* Navigation links styles */
+nav ul {
+  display: flex; /* Display the nav links horizontally */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
-.navbar a {
-  color: white; /* Link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth color change on hover */
+/* Style each list item */
+nav ul li {
+  margin: 0 10px; /* Space between horizontal items */
 }
 
-.navbar a:hover {
-  color: #ffcc00; /* Change color on hover */
+/* Style the links */
+nav ul li a {
+  color: black; /* Link color when not scrolled */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px; /* Font size for desktop links */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect and color */
+  padding: 10px; /* Add padding around links for better spacing */
 }
 
-@media (max-width: 768px) {
-  .logo img {
-    width: 150px; /* Smaller logo for mobile */
+/* Change link color to white when header is sticky */
+header.sticky nav ul li a {
+  color: white; /* Link color when scrolled */
+}
+
+/* Optional hover effect */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Hide the menu icon on larger screens */
+.menu-icon {
+  display: none; /* Hide menu icon on larger screens */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  /* Hide the navigation menu by default on mobile */
+  nav {
+    display: none; /* Hide nav by default */
+    position: fixed; /* Fix position to cover the screen */
+    top: 70px; /* Set the top padding equal to the header height */
+    right: 0; /* Align to the right */
+    background-color: rgba(0, 0, 0, 0.9); /* Background for the menu */
+    width: 50vw; /* Set the width to half of the viewport width */
+    height: calc(
+      100vh - 70px
+    ); /* Set height to full viewport height minus header height */
+    border-radius: 0; /* No rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+    transform: translateX(100%); /* Start hidden off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for appearance */
   }
 
-  .header {
-    padding: 10px; /* Less padding on mobile */
+  /* Show the navigation when the menu icon is clicked */
+  nav.active {
+    display: block; /* Show the menu when active */
+    transform: translateX(0); /* Slide in from the right */
   }
 
-  .navbar li {
-    margin-left: 10px; /* Adjust spacing for mobile */
+  nav.active ul {
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack items vertically */
+    padding: 0; /* No padding around the menu */
+    margin: 0; /* No margin around the menu */
+    height: 100%; /* Full height of the nav */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start; /* Align items to the left */
   }
+
+  nav ul li {
+    margin: 5px 0; /* Reduced space between vertical items */
+  }
+
+  nav ul li a {
+    color: white; /* Link color for mobile menu */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Reduced padding for mobile links */
+    font-size: 18px; /* Increase font size for better visibility */
+    display: block; /* Make the entire area clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+
+  /* Optional hover effect */
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  }
+
+  /* Show the menu icon on smaller screens */
+  .menu-icon {
+    display: block; /* Show menu icon on mobile */
+    cursor: pointer; /* Change cursor to pointer */
+    margin-right: 20px; /* Add margin to the right */
+    color: black; /* Set color to black initially */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+
+  .menu-icon span {
+    display: block; /* Stack spans vertically */
+    height: 3px; /* Thickness of the icon lines */
+    width: 25px; /* Width of the icon lines */
+    background: currentColor; /* Use current color for icon lines */
+    margin: 4px 0; /* Space between lines */
+  }
+}
+
+/* Change menu icon color when header is sticky */
+header.sticky .menu-icon {
+  color: white; /* Change to white when scrolling */
 }

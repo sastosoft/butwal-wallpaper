@@ -3,114 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Decor Wallpaper Company</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Home Décor Wallpaper Co.</title>
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/typewriter.css" />
+    <link rel="stylesheet" href="css/hero-content.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="header">
+    <div class="wrapper">
+      <!-- Header starts here -->
+      <header id="header">
         <div class="logo">
-          <img src="logo.png" alt="Company Logo" />
-          <!-- Replace with your logo path -->
+          <img src="logo.png" alt="WallpaperCo Logo" />
         </div>
-        <nav class="navbar">
+        <div class="menu-icon" id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav id="nav-menu">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about-us">About Us</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
       </header>
 
-      <section class="hero">
-        <div class="hero-slider">
-          <div class="slide">
+      <div class="hero-container">
+        <section id="home" class="hero">
+          <div class="hero-gallery">
             <img
-              src="https://www.pixelstalk.net/wp-content/uploads/images1/Living-room-design-hd-wallpaper.jpg"
-              alt="Living Room Design"
+              src="https://img.pikbest.com/origin/09/11/11/51TpIkbEsTsDv.jpg!w700wp"
+              alt="Wallpaper 1"
+            />
+            <img
+              src="https://media.designcafe.com/wp-content/uploads/2019/12/21000322/bedroom-design-wallpaper-for-your-home.jpg"
+              alt="Wallpaper 2"
+            />
+            <img
+              src="https://modern-2-interiors.co.uk/cdn/shop/files/wallcoverings-shop-all-romo-wallcoverings.jpg?v=1695306739&width=1080"
+              alt="Wallpaper 3"
+            />
+            <img
+              src="https://ae01.alicdn.com/kf/S45e975f628564a9eb778c74cd8757403Z/Customized-modern-abstract-lines-new-Chinese-ink-landscape-elk-background-wall-papers-home-decor-3d-wallpaper.jpg"
+              alt="Wallpaper 4"
+            />
+            <img
+              src="https://wallsneedlove.com/cdn/shop/products/w0588_1s_Eclectic-high-contrast-abstract-animal-print-wallpaper-Modern-Curator_For-Home-Offices-1.jpg?v=1626210165"
+              alt="Wallpaper 5"
+            />
+            <img
+              src="https://img.joomcdn.net/3457a22c01f711948b4917648b4b1eff31071d16_original.jpeg"
+              alt="Wallpaper 6"
+            />
+            <img
+              src="https://ondecor.com/cdn/shop/products/il_fullxfull.4799459157_l090.jpg?v=1717324510&width=1445"
+              alt="Wallpaper 7"
+            />
+            <img
+              src="https://pearlandmaude.com/wp-content/uploads/2020/04/Modern-Velvet-Interior-Persian-Rug-water-4_Zoom_with-art_watermarkedpsd.jpg"
+              alt="Wallpaper 8"
+            />
+            <img
+              src="https://www.dhresource.com/webp/m/0x0/f2/albu/g9/M01/74/D9/rBVaVVzzpYWAas0tAAtH_edTYaY576.jpg"
+              alt="Wallpaper 9"
             />
           </div>
-          <div class="slide">
-            <img
-              src="https://www.pixelstalk.net/wp-content/uploads/images1/Orange-sofa-room-design-wallpaper-hd-free-download.jpg"
-              alt="Wallpaper Design 2"
-            />
-          </div>
-          <div class="slide">
-            <img
-              src="https://www.pixelstalk.net/wp-content/uploads/images1/Farrowandball-bedroom-wallpaper-room.jpg"
-              alt="Wallpaper Design 3"
-            />
-          </div>
-        </div>
-        <div class="hero-content">
-          <h2>
-            <span class="typewriter">Welcome to Butwal Wallpaper</span>
-          </h2>
-          <p>Explore our wide range of beautiful wallpapers.</p>
-        </div>
-      </section>
 
-      <section class="hot-categories">
+          <div class="hero-content">
+            <h1 id="typewriter-h1"></h1>
+            <p id="typewriter-p">
+              Find the perfect wallpaper to elevate your space.
+            </p>
+            <button>Explore Now</button>
+          </div>
+        </section>
+      </div>
+
+      <section id="hot-categories" class="hot-categories">
         <h2>Hot Categories</h2>
-        <div class="categories-container">
-          <div class="category">
-            <img src="https://via.placeholder.com/150" alt="Category 1" />
-            <h3>Category 1</h3>
-          </div>
-          <div class="category">
-            <img src="https://via.placeholder.com/150" alt="Category 2" />
-            <h3>Category 2</h3>
-          </div>
-          <div class="category">
-            <img src="https://via.placeholder.com/150" alt="Category 3" />
-            <h3>Category 3</h3>
-          </div>
-          <div class="category">
-            <img src="https://via.placeholder.com/150" alt="Category 4" />
-            <h3>Category 4</h3>
-          </div>
+        <div class="category-grid">
+          <div class="category">Floral</div>
+          <div class="category">Modern</div>
+          <div class="category">Vintage</div>
+          <div class="category">Minimal</div>
         </div>
       </section>
 
-      <section class="new-arrivals">
+      <section id="new-arrivals" class="new-arrivals">
         <h2>New Arrivals</h2>
-        <div class="arrivals-container">
-          <div class="arrival">
-            <img src="https://via.placeholder.com/150" alt="New Arrival 1" />
-            <h3>New Arrival 1</h3>
+        <div class="gallery">
+          <div class="wallpaper">Wallpaper 1</div>
+          <div class="wallpaper">Wallpaper 2</div>
+          <div class="wallpaper">Wallpaper 3</div>
+          <div class="wallpaper">Wallpaper 4</div>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>
+          At WallpaperCo, we believe every wall tells a story. With years of
+          expertise in home décor, we specialize in providing premium wallpapers
+          that fit every taste and style.
+        </p>
+      </section>
+
+      <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+          <div class="service-item">
+            <h3>Custom Wallpaper Design</h3>
+            <p>Create bespoke designs tailored to your needs.</p>
           </div>
-          <div class="arrival">
-            <img src="https://via.placeholder.com/150" alt="New Arrival 2" />
-            <h3>New Arrival 2</h3>
+          <div class="service-item">
+            <h3>Installation Service</h3>
+            <p>Our experts will install wallpapers flawlessly.</p>
           </div>
-          <div class="arrival">
-            <img src="https://via.placeholder.com/150" alt="New Arrival 3" />
-            <h3>New Arrival 3</h3>
-          </div>
-          <div class="arrival">
-            <img src="https://via.placeholder.com/150" alt="New Arrival 4" />
-            <h3>New Arrival 4</h3>
+          <div class="service-item">
+            <h3>Consultation</h3>
+            <p>Let our team guide you through the perfect selection.</p>
           </div>
         </div>
       </section>
 
-      <main class="main-content">
-        <h2>Welcome to Our Wallpaper Collection</h2>
-        <p>Explore our wide range of beautiful wallpapers.</p>
-        <!-- Add your gallery or main content here -->
-      </main>
+      <section id="contact" class="contact-us">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Reach out via the form below:</p>
+        <form action="#" method="post">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
 
-      <footer class="footer">
-        <p>&copy; 2024 Home Decor Wallpaper Company. All rights reserved.</p>
+      <footer>
+        <p>&copy; 2024 WallpaperCo. All rights reserved.</p>
       </footer>
     </div>
+
     <script src="js/header.js"></script>
+    <script src="js/hero-content.js"></script>
     <script src="js/hero.js"></script>
-    <script src="js/typewriter.js"></script>
-    <!-- Link to your separate JS file -->
   </body>
 </html>

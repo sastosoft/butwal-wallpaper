@@ -1,0 +1,98 @@
+/* Hero Content Styles */
+.hero-content {
+  position: relative; /* For positioning text */
+  z-index: 2; /* Bring text in front of images */
+  color: white; /* Text color */
+  padding: 20px; /* Padding around text */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for better visibility */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  word-wrap: break-word; /* Allow words to break for long text */
+}
+
+/* Heading styles */
+.hero-content h1 {
+  font-family: "Courier New", Courier, monospace; /* Typewriter-like font */
+  white-space: nowrap; /* Prevent wrapping for the typewriter effect */
+}
+
+/* Paragraph styles */
+.hero-content p {
+  margin-top: 10px; /* Space between heading and paragraph */
+  font-size: 1.5rem; /* Font size for paragraph */
+}
+
+/* Button styles */
+.hero-content button {
+  padding: 10px 20px; /* Add padding for button */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for button */
+  color: #000; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth background transition and scaling */
+  margin-top: 15px; /* Space above the button */
+}
+
+/* Button hover effect */
+.hero-content button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+  transform: scale(1.05); /* Slightly increase button size */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 10px; /* Reduce padding for smaller screens */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.7
+    ); /* Slightly darker background for better visibility */
+  }
+
+  /* Heading styles */
+  .hero-content h1 {
+    font-size: 1.5rem; /* Smaller font size for heading on mobile */
+    white-space: normal; /* Allow wrapping for mobile */
+  }
+
+  /* Paragraph styles */
+  .hero-content p {
+    font-size: 1.2rem; /* Smaller font size for paragraph */
+  }
+
+  /* Button styles */
+  .hero-content button {
+    font-size: 14px; /* Smaller font size for button */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 5px; /* Further reduce padding */
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem; /* Smaller font size for heading on very small screens */
+    white-space: normal; /* Allow wrapping for very small screens */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Even smaller font size for paragraph */
+  }
+
+  /* Button styles */
+  .hero-content button {
+    font-size: 12px; /* Smaller font size for button */
+    padding: 6px 12px; /* Adjust padding for very small screens */
+  }
+}

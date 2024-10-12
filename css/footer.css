@@ -1,0 +1,27 @@
+/* Ensure the body takes full height */
+html,
+body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
+}
+
+/* Make the wrapper a flex container */
+.wrapper {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Make the wrapper at least full height */
+}
+
+/* Allow sections to grow and push the footer down */
+section {
+  flex: 1; /* Allow sections to expand and fill space */
+  padding: 20px; /* Optional padding for sections */
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f8f8; /* Optional: Add a background color */
+  padding: 20px; /* Optional: Add padding */
+  text-align: center; /* Center the footer text */
+  margin-top: auto; /* Ensure the footer is pushed to the bottom */
+}
