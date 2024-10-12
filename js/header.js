@@ -1,8 +1,8 @@
 // Select the header element
 const header = document.getElementById("header");
 
-// Function to handle scroll and touch events
-const handleScroll = () => {
+// Add an event listener to track scroll events
+window.addEventListener("scroll", () => {
   // Check if the page has been scrolled more than 50px
   if (window.scrollY > 50) {
     // Add the 'sticky' class to change background color and link color
@@ -16,11 +16,7 @@ const handleScroll = () => {
     // Remove the 'sticky' class when scrolled back to the top
     header.classList.remove("sticky");
   }
-};
-
-// Add event listeners for scroll and touchmove
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("touchmove", handleScroll);
+});
 
 // Select the menu icon and nav menu
 const menuIcon = document.getElementById("menu-icon");

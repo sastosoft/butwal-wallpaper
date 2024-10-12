@@ -1,5 +1,5 @@
 const text = "Welcome to Butwal Wallpaper"; // Text to type
-const h1 = document.getElementById("typewriter-h1");
+const h1 = document.getElementById("typewriter");
 let index = 0; // Start index
 const typingSpeed = 150; // Typing speed
 

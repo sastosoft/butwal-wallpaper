@@ -8,8 +8,8 @@
     0,
     0,
     0,
-    0.5
-  ); /* Semi-transparent background for better visibility */
+    0.3
+  ); /* More transparent background for better visibility */
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Hide overflow */
   word-wrap: break-word; /* Allow words to break for long text */
@@ -54,8 +54,8 @@
       0,
       0,
       0,
-      0.7
-    ); /* Slightly darker background for better visibility */
+      0.5
+    ); /* More transparent background for better visibility */
   }
 
   /* Heading styles */
