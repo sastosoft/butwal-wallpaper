@@ -22,3 +22,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   type(); // Start the typewriter effect
 });
+
+// Wait until the DOM content is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all category elements
+  const categories = document.querySelectorAll(".category");
+
+  // Function to check visibility of each category
+  function checkVisibility() {
+    // Get the height of the window
+    const windowHeight = window.innerHeight;
+
+    // Loop through each category
+    categories.forEach((category) => {
+      // Get the position of the category relative to the viewport
+      const rect = category.getBoundingClientRect();
+
+      // Check if the category is within the viewport
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        // If in view, add the 'visible' class to trigger CSS animations
+        category.classList.add("visible");
+      }
+    });
+  }
+
+  // Attach the checkVisibility function to the scroll event
+  window.addEventListener("scroll", checkVisibility);
+
+  // Check visibility on page load
+  checkVisibility();
+});

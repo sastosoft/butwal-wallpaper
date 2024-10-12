@@ -3,6 +3,7 @@ html,
 body {
   height: 100%;
   margin: 0; /* Remove default margin */
+  font-family: "Lexend", sans-serif; /* Apply Lexend font */
 }
 
 /* Make the wrapper a flex container */

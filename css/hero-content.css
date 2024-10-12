@@ -17,7 +17,6 @@
 
 /* Heading styles */
 .hero-content h1 {
-  font-family: "Courier New", Courier, monospace; /* Typewriter-like font */
   white-space: nowrap; /* Prevent wrapping for the typewriter effect */
 }
 
@@ -36,6 +35,7 @@
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Change cursor to pointer */
   font-size: 16px; /* Font size */
+  font-family: inherit; /* Inherit font from body */
   transition: background-color 0.3s, transform 0.2s; /* Smooth background transition and scaling */
   margin-top: 15px; /* Space above the button */
 }
@@ -49,7 +49,7 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .hero-content {
-    padding: 10px; /* Reduce padding for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
     background-color: rgba(
       0,
       0,
@@ -60,39 +60,41 @@
 
   /* Heading styles */
   .hero-content h1 {
-    font-size: 1.5rem; /* Smaller font size for heading on mobile */
+    font-size: 1.2rem; /* Smaller font size for heading on mobile */
     white-space: normal; /* Allow wrapping for mobile */
   }
 
   /* Paragraph styles */
   .hero-content p {
-    font-size: 1.2rem; /* Smaller font size for paragraph */
+    font-size: 1rem; /* Smaller font size for paragraph */
   }
 
   /* Button styles */
   .hero-content button {
     font-size: 14px; /* Smaller font size for button */
-    padding: 8px 16px; /* Adjust padding for smaller screens */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    margin-top: 10px; /* Reduced margin for button */
   }
 }
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 5px; /* Further reduce padding */
+    padding: 10px; /* Further reduce padding */
   }
 
   .hero-content h1 {
-    font-size: 1.2rem; /* Smaller font size for heading on very small screens */
+    font-size: 1rem; /* Smaller font size for heading on very small screens */
     white-space: normal; /* Allow wrapping for very small screens */
   }
 
   .hero-content p {
-    font-size: 1rem; /* Even smaller font size for paragraph */
+    font-size: 0.9rem; /* Even smaller font size for paragraph */
   }
 
   /* Button styles */
   .hero-content button {
     font-size: 12px; /* Smaller font size for button */
-    padding: 6px 12px; /* Adjust padding for very small screens */
+    padding: 6px 10px; /* Adjust padding for very small screens */
+    margin-top: 8px; /* Reduced margin for button */
   }
 }

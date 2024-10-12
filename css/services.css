@@ -1,0 +1,57 @@
+.services-wrapper {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #333; /* Dark color for the heading */
+  margin-bottom: 15px;
+}
+
+.service-list {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+}
+
+.service-item {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent white background */
+  padding: 15px;
+  margin: 10px; /* Space between items */
+  width: 200px; /* Fixed width for square boxes */
+  height: 200px; /* Fixed height for square boxes */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s; /* Transition for scaling effect */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  color: #333; /* Dark color for headings */
+  margin-bottom: 10px;
+  text-align: center; /* Center the heading text */
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #555; /* Medium gray color for paragraph text */
+  text-align: center; /* Center the paragraph text */
+  line-height: 1.5;
+}
