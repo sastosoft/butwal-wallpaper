@@ -1,0 +1,65 @@
+.contact-wrapper {
+  padding: 20px; /* Padding around the contact section */
+  margin: 20px 0; /* Margin between sections */
+}
+
+.contact-us {
+  text-align: center; /* Center text in the contact section */
+}
+
+.contact-us h2 {
+  font-size: 2.5rem; /* Increase heading size for prominence */
+  color: #333; /* Dark color for heading */
+  margin-bottom: 15px; /* Space below the heading */
+  font-weight: bold; /* Make the heading bold */
+}
+
+.contact-us p {
+  font-size: 1.2rem; /* Font size for the paragraph */
+  color: #555; /* Gray color for paragraph text */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.contact-us form {
+  display: flex; /* Use flexbox for form layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.contact-us input,
+.contact-us textarea {
+  width: 100%; /* Full width inputs */
+  max-width: 400px; /* Maximum width for inputs */
+  padding: 12px; /* Increased padding for comfort */
+  margin: 10px 0; /* Margin between inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 1rem; /* Font size for inputs */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus effect */
+  background-color: transparent; /* Transparent background */
+  font-family: inherit; /* Inherit font from body */
+}
+
+.contact-us input:focus,
+.contact-us textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow on focus */
+}
+
+.contact-us button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  padding: 12px 20px; /* Padding inside button */
+  border: none; /* No border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 1rem; /* Font size for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+  font-family: inherit; /* Inherit font from body */
+}
+
+.contact-us button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
