@@ -36,14 +36,38 @@
   cursor: pointer; /* Change cursor to pointer */
   font-size: 16px; /* Font size */
   font-family: inherit; /* Inherit font from body */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth background transition and scaling */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth background transition */
   margin-top: 15px; /* Space above the button */
+  animation: heartbeat 1.5s infinite; /* Apply heartbeat animation */
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.8); /* Original color */
+  }
+  50% {
+    transform: scale(1.1); /* Scale up for heartbeat effect */
+    background-color: rgba(
+      0,
+      255,
+      0,
+      1
+    ); /* Change color to green during heartbeat */
+    color: #fff; /* Change text color for better contrast */
+  }
 }
 
 /* Button hover effect */
 .hero-content button:hover {
-  background-color: rgba(255, 255, 255, 1); /* Change background on hover */
-  transform: scale(1.05); /* Slightly increase button size */
+  background-color: rgba(
+    0,
+    255,
+    0,
+    1
+  ); /* Change background to green on hover */
 }
 
 /* Mobile Styles */

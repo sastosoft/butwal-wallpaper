@@ -22,3 +22,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
   type(); // Start the typewriter effect
 });
+
+// Scroll reveal
+
+document.addEventListener("DOMContentLoaded", function () {
+  const serviceItems = document.querySelectorAll(".service-item");
+
+  const checkVisibility = () => {
+    const windowHeight = window.innerHeight;
+
+    serviceItems.forEach((item) => {
+      const itemTop = item.getBoundingClientRect().top;
+
+      // Check if the item is within the viewport
+      if (itemTop < windowHeight - 50) {
+        // Trigger slightly before it enters
+        item.classList.add("visible"); // Add class when item is in view
+      }
+    });
+  };
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Run on initial load
+});
+
+// Bakcground images
+
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceItems = document.querySelectorAll(".service-item");
+
+  // Set the background image for each service item
+  serviceItems.forEach((item) => {
+    const bgImage = item.getAttribute("data-bg");
+    if (bgImage) {
+      item.style.backgroundImage = bgImage; // Apply the background image
+    }
+  });
+
+  // Function to add the 'visible' class when items are in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  serviceItems.forEach((item) => {
+    observer.observe(item);
+  });
+});

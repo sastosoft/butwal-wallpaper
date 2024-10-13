@@ -22,7 +22,7 @@ header {
 
 /* Change background color when the header has the 'sticky' class */
 header.sticky {
-  background-color: black; /* Background color when scrolling */
+  background-color: #333; /* Background color when scrolling */
 }
 
 /* Logo styles */

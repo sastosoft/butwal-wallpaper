@@ -3,14 +3,22 @@ html,
 body {
   height: 100%;
   margin: 0; /* Remove default margin */
-  font-family: "Lexend", sans-serif; /* Apply Lexend font */
-}
+  font-family: "Arial", sans-serif; /* Apply Arial font */
 
-/* Make the wrapper a flex container */
-.wrapper {
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  min-height: 100vh; /* Make the wrapper at least full height */
+  /* Colorful Radial Gradient Background */
+  background: radial-gradient(
+      circle,
+      rgba(255, 0, 0, 0.1),
+      /* Red */ rgba(255, 165, 0, 0.1),
+      /* Orange */ rgba(255, 255, 0, 0.1),
+      /* Yellow */ rgba(0, 255, 0, 0.1),
+      /* Green */ rgba(0, 255, 255, 0.1),
+      /* Cyan */ rgba(0, 0, 255, 0.1),
+      /* Blue */ rgba(75, 0, 130, 0.1),
+      /* Indigo */ rgba(148, 0, 211, 0.1) /* Violet */
+    ),
+    radial-gradient(circle, rgba(0, 0, 0, 0.2), transparent 60%); /* Contour-like effect */
+  background-size: cover; /* Cover the entire body */
 }
 
 /* Allow sections to grow and push the footer down */

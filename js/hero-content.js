@@ -1,4 +1,4 @@
-const text = "Namaste, Welcome to Butwal Wallpaper!"; // Text to type
+const text = "Namaste, Welcome to Butwal Wallpaper"; // Text to type
 const h1 = document.getElementById("typewriter");
 let index = 0; // Start index
 const typingSpeed = 150; // Typing speed
