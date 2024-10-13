@@ -80,6 +80,15 @@
   line-height: 1.5;
 }
 
+.service-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: #333; /* Set the text color */
+}
+
+.service-link:hover {
+  text-decoration: none; /* Ensure underline doesn't appear on hover */
+}
+
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .service-item {

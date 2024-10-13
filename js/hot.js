@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const text = "Hot Categories"; // Text to type
+  const text = "Wallpapers"; // Text to type
   const h2 = document.getElementById("typewriter-hot"); // Get the h2 element
   let index = 0; // Start index
   const typingSpeed = 150; // Typing speed
