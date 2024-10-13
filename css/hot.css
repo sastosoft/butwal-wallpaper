@@ -1,89 +1,82 @@
+/* Wrapper for spacing */
 .hot-categories-wrapper {
-  padding: 20px;
-  margin: 20px 0;
+  padding: 40px; /* Consistent padding */
+  margin: 30px 0;
 }
 
+/* Styling for the hot categories section */
 .hot-categories {
   text-align: center;
 }
 
+/* Hot Categories Heading */
 .hot-categories h2 {
   font-size: 2rem;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
+/* Grid layout for categories */
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px; /* Space between items */
-  justify-content: center; /* Center the grid items horizontally */
+  gap: 60px; /* Increased gap between items */
+  justify-content: center; /* Center the grid items */
 }
 
 /* Category Widget */
 .category {
-  width: 250px; /* Fixed width for square boxes */
-  height: 250px; /* Fixed height to make it square */
+  width: 100%;
+  max-width: 250px;
+  height: 250px; /* Ensures square dimensions */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
-  border-radius: 15px; /* Add border radius to the image boxes */
+  border-radius: 15px; /* Optional: Rounding */
+
+  /* Scroll reveal effect styles */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly lower */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for the reveal effect */
 }
 
 /* Image inside category */
 .category img {
   width: 100%;
-  height: 100%; /* Make the image fill the square */
+  height: 100%; /* Makes the image fill the square */
   object-fit: cover; /* Maintain aspect ratio */
-  border-radius: 15px; /* Ensure the images have the same border radius */
+  border-radius: 15px; /* Optional: Match the border radius */
 }
 
-/* Text below image */
-.category p {
-  font-size: 1.2rem;
-  color: #555;
-  text-align: center;
-}
-
-/* Hover effect */
+/* Hover effect for category */
 .category:hover {
   background-color: #e7f3ff;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .category-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(150px, 1fr)
-    ); /* Adjust min width for mobile */
-    place-items: center; /* Center the grid items vertically and horizontally */
-  }
-
-  .category {
-    width: 90%; /* Adjust to take most of the screen width */
-    height: 90%; /* Set height to maintain square shape */
-    aspect-ratio: 1; /* Maintain square aspect ratio */
-    max-width: 250px; /* Prevent too large categories */
-  }
-}
-
-/* Scroll Reveal Effect */
-.category {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(20px); /* Start slightly lower */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for the reveal effect */
-}
-
 /* Class to reveal the element */
 .reveal {
   opacity: 1; /* Make visible */
   transform: translateY(0); /* Move to original position */
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    place-items: center;
+    gap: 30px; /* Adjust gap for mobile */
+  }
+
+  .category {
+    width: 90%; /* Take most of the screen width */
+    max-width: 400px; /* Limit max width */
+    height: auto; /* Allow height to adjust */
+    aspect-ratio: 1; /* Maintain square shape */
+  }
 }

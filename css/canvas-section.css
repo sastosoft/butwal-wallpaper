@@ -1,17 +1,17 @@
 /* Wrapper for spacing */
-.new-arrivals-wrapper {
-  padding: 40px;
+.canvas-section {
+  padding: 40px; /* Padding top and bottom, with equal padding on left and right */
   margin: 30px 0;
   overflow: hidden; /* Prevents overflow during animation */
 }
 
-/* Styling for the new arrivals section */
-.new-arrivals {
+/* Styling for the canvas section */
+.canvas-section {
   text-align: center;
 }
 
-/* New Arrivals Heading */
-.new-arrivals h2 {
+/* Canvas Section Heading */
+.canvas-section h2 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
@@ -20,16 +20,14 @@
 /* Gallery Grid */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Four items in a row */
   gap: 60px; /* Increased gap between items */
   justify-content: center;
 }
 
-/* Wallpaper Widget */
-.wallpaper {
-  width: 100%;
-  max-width: 250px;
-  position: relative; /* For positioning child elements */
+/* Canvas Art Widget */
+.canvas-art {
+  width: 100%; /* Full width for the widget */
   padding-top: 100%; /* Set padding to maintain aspect ratio of 1:1 */
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -50,8 +48,8 @@
   transform: translateY(0); /* Move to original position */
 }
 
-/* Image inside wallpaper */
-.wallpaper img {
+/* Image inside canvas art */
+.canvas-art img {
   position: absolute; /* Position the image absolutely */
   top: 0;
   left: 0;
@@ -59,12 +57,6 @@
   height: 100%; /* Ensures the image covers the entire area */
   object-fit: cover; /* Maintain aspect ratio */
   border-radius: 15px; /* Match the rounding of the item box */
-}
-
-/* Class to reveal the element */
-.reveal {
-  opacity: 1; /* Make visible */
-  transform: translateY(0); /* Move to original position */
 }
 
 /* Mobile Optimization */
@@ -75,7 +67,7 @@
     gap: 30px; /* Adjust spacing between items on mobile */
   }
 
-  .wallpaper {
+  .canvas-art {
     width: 90%; /* Full width on mobile */
     padding-top: 90%; /* Ensure square shape */
   }

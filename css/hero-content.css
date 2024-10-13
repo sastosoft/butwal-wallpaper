@@ -52,22 +52,17 @@
     transform: scale(1.1); /* Scale up for heartbeat effect */
     background-color: rgba(
       0,
-      255,
+      150,
       0,
       1
-    ); /* Change color to green during heartbeat */
+    ); /* Adjusted green color during heartbeat */
     color: #fff; /* Change text color for better contrast */
   }
 }
 
 /* Button hover effect */
 .hero-content button:hover {
-  background-color: rgba(
-    0,
-    255,
-    0,
-    1
-  ); /* Change background to green on hover */
+  background-color: rgba(0, 150, 0, 1); /* Adjusted background color on hover */
 }
 
 /* Mobile Styles */

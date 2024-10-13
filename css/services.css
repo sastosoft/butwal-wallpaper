@@ -89,6 +89,15 @@
   text-decoration: none; /* Ensure underline doesn't appear on hover */
 }
 
+.service-item a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Make link color inherit from parent element */
+}
+
+.service-item a:hover {
+  text-decoration: none; /* Ensure underline is removed on hover as well */
+}
+
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .service-item {
@@ -119,4 +128,8 @@
   .service-link:hover {
     text-decoration: none; /* Ensure underline doesn't appear on hover */
   }
+}
+
+.service-list .service-item {
+  text-decoration: none; /* Remove underline from links */
 }
