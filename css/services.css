@@ -94,11 +94,29 @@
   .service-item {
     width: calc(50% - 20px); /* 2 items per row on tablets */
   }
+
+  .service-link {
+    text-decoration: none; /* Remove underline from the link */
+    color: #333; /* Set the text color */
+  }
+
+  .service-link:hover {
+    text-decoration: none; /* Ensure underline doesn't appear on hover */
+  }
 }
 
 @media (max-width: 480px) {
   .service-item {
     width: 100%; /* 1 item per row on mobile */
     height: auto; /* Adjust height for mobile */
+  }
+
+  .service-link {
+    text-decoration: none; /* Remove underline from the link */
+    color: #333; /* Set the text color */
+  }
+
+  .service-link:hover {
+    text-decoration: none; /* Ensure underline doesn't appear on hover */
   }
 }
