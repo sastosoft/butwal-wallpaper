@@ -16,32 +16,31 @@
 .category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px; /* Space between items */
+  gap: 40px; /* Space between items */
   justify-content: center; /* Center the grid items horizontally */
 }
 
 /* Category Widget */
 .category {
-  width: 100%; /* Full width for mobile */
-  max-width: 250px; /* Limit max width on larger screens */
-  height: 300px;
+  width: 250px; /* Fixed width for square boxes */
+  height: 250px; /* Fixed height to make it square */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
   transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
+  border-radius: 15px; /* Add border radius to the image boxes */
 }
 
 /* Image inside category */
 .category img {
   width: 100%;
-  height: 70%;
+  height: 100%; /* Make the image fill the square */
   object-fit: cover; /* Maintain aspect ratio */
-  margin-bottom: 10px;
+  border-radius: 15px; /* Ensure the images have the same border radius */
 }
 
 /* Text below image */
@@ -61,12 +60,30 @@
 /* Mobile Optimization */
 @media (max-width: 768px) {
   .category-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust min width for mobile */
     place-items: center; /* Center the grid items vertically and horizontally */
   }
 
   .category {
     width: 90%; /* Adjust to take most of the screen width */
-    max-width: 400px; /* Prevent too large categories */
+    height: 90%; /* Set height to maintain square shape */
+    aspect-ratio: 1; /* Maintain square aspect ratio */
+    max-width: 250px; /* Prevent too large categories */
   }
+}
+
+/* Scroll Reveal Effect */
+.category {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly lower */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transition for the reveal effect */
+}
+
+/* Class to reveal the element */
+.reveal {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
 }

@@ -52,3 +52,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check visibility on page load
   checkVisibility();
 });
+
+// scroll reveal
+document.addEventListener("DOMContentLoaded", function () {
+  const categories = document.querySelectorAll(".category");
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+
+    categories.forEach((category) => {
+      const categoryTop = category.getBoundingClientRect().top;
+
+      // If the category is in view
+      if (categoryTop < windowHeight * 0.8 && categoryTop > 0) {
+        category.classList.add("reveal"); // Add the reveal class
+      } else {
+        category.classList.remove("reveal"); // Remove the reveal class when not in view
+      }
+    });
+  };
+
+  // Run the function on scroll
+  window.addEventListener("scroll", revealOnScroll);
+
+  // Run the function on initial load
+  revealOnScroll();
+});
