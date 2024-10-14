@@ -1,4 +1,3 @@
-// Initialize EmailJS with your public key
 (function () {
   emailjs.init("oWRI72Q2OSFq_2tQV"); // Your public key
 })();
