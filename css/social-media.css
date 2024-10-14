@@ -1,0 +1,40 @@
+.social-media {
+  text-align: center; /* Center the entire section */
+  margin: 30px 0; /* Add some space above and below */
+}
+
+.social-media h2 {
+  font-size: 1.8rem;
+  color: #333; /* Dark text color */
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  display: inline-block; /* Ensure icons are aligned horizontally */
+  margin: 0 10px; /* Add spacing between icons */
+  font-size: 2rem; /* Icon size */
+  transition: transform 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Icon colors using native logo colors */
+.social-icon .fa-facebook-f {
+  color: #1877f2; /* Facebook color */
+}
+
+.social-icon .fa-instagram {
+  color: #e1306c; /* Instagram color */
+}
+
+.social-icon .fa-tiktok {
+  color: #25f4ee; /* TikTok color */
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    font-size: 1.5rem; /* Adjust icon size for smaller screens */
+  }
+}
