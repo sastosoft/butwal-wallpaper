@@ -1,0 +1,15 @@
+# Block access to admin and private directories
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+
+# Allow everything else to be indexed
+User-agent: *
+Allow: /
+
+# Block specific files from being indexed
+Disallow: /config.php
+Disallow: /secret.html
+
+# Sitemap location for butwalwallpaper.com
+Sitemap: https://www.butwalwallpaper.com/sitemap.xml
